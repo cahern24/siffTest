@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "3cf56d0f-0977-4916-965c-82d5f79789b5",
+		"name": "Test Git",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "test 1 (invite user with admin)",
+			"item": [
+				{
+					"name": "/user/list Copy",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "a5e30399-c457-4a83-af54-88718053b032",
+								"exec": [
+									"pm.environment.set(\"get-id\", \"1\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{web-admin}}/api/user/list",
+							"host": [
+								"{{web-admin}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/user/invite",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": " cristiano",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": " chjserra@outlook.com",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": " 1234567",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": " admin",
+									"type": "text"
+								},
+								{
+									"key": "billing",
+									"value": "true",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{web-admin}}/api/user/invite",
+							"host": [
+								"{{web-admin}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"invite"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "{{web-admin}}/api/user/invite (help",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": " cristiano",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": " chjserra@outlook.com",
+											"type": "text"
+										},
+										{
+											"key": "mobile",
+											"value": " 1234567",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": " admin",
+											"type": "text"
+										},
+										{
+											"key": "billing",
+											"value": "true",
+											"type": "text"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{web-admin}}/api/user/invite",
+									"host": [
+										"{{web-admin}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"invite"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 03 Mar 2020 09:18:09 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "128"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "AWSALB=LTrPKjafhKJcGRMTSZ29vlMtokr13qbcL/7zY9DyjN+b8OFE7f/108ut053QiEqk7VbnD0zHuGtqsFClVhBpU60zbk7j1EvAIYXjouHXUlfQVmxqBT9/8ucjOD3P; Expires=Tue, 10 Mar 2020 09:18:09 GMT; Path=/"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "AWSALBCORS=LTrPKjafhKJcGRMTSZ29vlMtokr13qbcL/7zY9DyjN+b8OFE7f/108ut053QiEqk7VbnD0zHuGtqsFClVhBpU60zbk7j1EvAIYXjouHXUlfQVmxqBT9/8ucjOD3P; Expires=Tue, 10 Mar 2020 09:18:09 GMT; Path=/; SameSite=None; Secure"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"meta_info\": {\n        \"duration\": 0.000001918,\n        \"trace_id\": \"12d58192-c3d9-429a-a179-8b2fd8e0960a\"\n    },\n    \"resources\": true\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
